@@ -1,6 +1,6 @@
 FROM docker:stable
 
-MAINTAINER Basilio Vera <basilio.vera@softonic.com>
+MAINTAINER Zach White <skullydazed@gmail.com>
 
 ARG version="0.1.0-dev"
 ARG build_date="unknown"
