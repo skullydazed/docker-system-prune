@@ -16,18 +16,7 @@ Unlike [the upstream image](/softonic/docker-system-prune) this was based on, th
 | Variable | Default Value | Description |
 |----------|---------------|-------------|
 | `DOCKER_SYSTEM_PRUNE_ARGS` | `--force` | The arguments to pass to `docker system prune` |
-| `DOCKER_SYSTEM_PRUNE_DATE_FMT` | `%Y-%m-%d %H:%M:%S %Z` | The date format to print in the logs |
 | `DOCKER_SYSTEM_PRUNE_SLEEP` | `86400` | How long to sleep between runs |
-
-### Accepted Date Formats
-
-You can use any date format that Busybox accepts. Per the help reference:
-
-    Recognized TIME formats:
-        hh:mm[:ss]
-        [YYYY.]MM.DD-hh:mm[:ss]
-        YYYY-MM-DD hh:mm[:ss]
-        [[[[[YY]YY]MM]DD]hh]mm[.ss]
 
 # Requirements
 
