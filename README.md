@@ -4,7 +4,7 @@ Executes the `docker system prune` command periodically.
 
 # Usage
 
-This image allows you to program automatically when a prune will be done in your hosts. The main advantage over external solutions like a cron job is that you can launch it in a cluster easily: "fire & forget"
+This image allows you to program automatically when a prune will be done on your hosts. The main advantage over external solutions like a cron job is that you can launch it in a cluster easily: "fire & forget"
 
 !!! info
          You need to mount the docker socket to allow the command to be executed in the host.
@@ -15,9 +15,9 @@ Unlike [the upstream image](/softonic/docker-system-prune) this was based on, th
 
 | Variable | Default Value | Description |
 |----------|---------------|-------------|
-| DOCKER_SYSTEM_PRUNE_ARGS | `--force` | The arguments to pass to `docker system prune` |
-| DOCKER_SYSTEM_PRUNE_DATE_FMT | `%Y-%m-%d %H:%M:%S %Z` | The date format to print in the logs |
-| DOCKER_SYSTEM_PRUNE_SLEEP | `86400` | How long to sleep between runs |
+| `DOCKER_SYSTEM_PRUNE_ARGS` | `--force` | The arguments to pass to `docker system prune` |
+| `DOCKER_SYSTEM_PRUNE_DATE_FMT` | `%Y-%m-%d %H:%M:%S %Z` | The date format to print in the logs |
+| `DOCKER_SYSTEM_PRUNE_SLEEP` | `86400` | How long to sleep between runs |
 
 # Requirements
 
