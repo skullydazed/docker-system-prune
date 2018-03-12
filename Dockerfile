@@ -1,4 +1,4 @@
-FROM docker:stable
+FROM debian:stable
 
 MAINTAINER Zach White <skullydazed@gmail.com>
 
@@ -23,4 +23,4 @@ LABEL org.label-schema.vendor="softonic" \
 COPY run.sh /run.sh
 
 ENTRYPOINT ["/run.sh"]
-CMD ["--loop"]
+CMD ["86400"]
