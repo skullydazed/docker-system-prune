@@ -10,9 +10,9 @@ ARG vcs_branch="unknown"
 
 LABEL org.label-schema.vendor="softonic" \
     org.label-schema.name="docker-system-prune" \
-    org.label-schema.description="Executes the `docker system prune` command" \
-    org.label-schema.usage="/src/README.md" \
-    org.label-schema.url="https://github.com/softonic/docker-system-prune/blob/master/README.md" \
+    org.label-schema.description="Executes the `docker system prune` command periodically" \
+    org.label-schema.usage="/README.md" \
+    org.label-schema.url="https://github.com/skullydazed/docker-system-prune/blob/master/README.md" \
     org.label-schema.vcs-url=$vcs_url \
     org.label-schema.vcs-branch=$vcs_branch \
     org.label-schema.vcs-ref=$commit_hash \
@@ -23,4 +23,4 @@ LABEL org.label-schema.vendor="softonic" \
 COPY run.sh /run.sh
 
 ENTRYPOINT ["/run.sh"]
-CMD ["--all"]
+CMD ["--loop"]
