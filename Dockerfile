@@ -1,4 +1,4 @@
-FROM debian:stable
+FROM docker:stable
 
 MAINTAINER Zach White <skullydazed@gmail.com>
 

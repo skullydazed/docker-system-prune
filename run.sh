@@ -7,7 +7,7 @@ fi
 
 # Date format
 if [ -z "$DOCKER_SYSTEM_PRUNE_DATE_FMT" ]; then
-	DOCKER_SYSTEM_PRUNE_DATE_FMT="%Y-%m-%d %H:%M:%S %Z"
+	DOCKER_SYSTEM_PRUNE_DATE_FMT="YYYY-MM-DD hh:mm:ss"
 fi
 
 # How long to wait between runs
@@ -19,8 +19,8 @@ fi
 
 # Main
 while true; do
-	echo "$(date +${DOCKER_SYSTEM_PRUNE_DATE_FMT}) Running 'docker system prune $DOCKER_SYSTEM_PRUNE_ARGS'"
+	echo "$(date +"${DOCKER_SYSTEM_PRUNE_DATE_FMT}") Running 'docker system prune $DOCKER_SYSTEM_PRUNE_ARGS'"
 	docker system prune $DOCKER_SYSTEM_PRUNE_ARGS
-	echo "$(date +${DOCKER_SYSTEM_PRUNE_DATE_FMT}) Sleeping $DOCKER_SYSTEM_PRUNE_SLEEP seconds...)"
+	echo "$(date +"${DOCKER_SYSTEM_PRUNE_DATE_FMT}") Sleeping $DOCKER_SYSTEM_PRUNE_SLEEP seconds...)"
 	sleep $DOCKER_SYSTEM_PRUNE_SLEEP
 done
