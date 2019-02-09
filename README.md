@@ -10,6 +10,10 @@ Note: You need to mount the docker socket as a volume to allow the command to be
 
 Unlike [the upstream image](/softonic/docker-system-prune) this was based on, this image runs continuously. It's probably better to do it @softonic's way, but I'm one person running a very small cluster, and this is the easiest way for me to both run this and examine its logs on my rancher infrastructure.
 
+## Installation
+
+use the docker image `skullydazed/docker-system-prune` hosted at http://hub.docker.com/r/skullydazed/docker-system-prune.
+
 ## Environment variables
 
 | Variable | Default Value | Description |
